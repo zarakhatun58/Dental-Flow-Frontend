@@ -1,6 +1,6 @@
 import axios from "axios";
 
-// Define your backend base URL here directly
+
 export const BASE_URL = "https://dental-ai-backend-d4es.onrender.com";
 // export const BASE_URL = "http://localhost:5000";
 
