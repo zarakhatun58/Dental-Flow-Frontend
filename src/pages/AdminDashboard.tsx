@@ -1,39 +1,50 @@
 import { Box, Container, Grid, Typography } from "@mui/material";
-import React from "react";
-import StatsCards from "../components/Dashboard/StatsCards";
-import AppointmentsTable from "../components/Dashboard/AppointmentsTable";
-import NoShowChart from "../components/Dashboard/NoShowAnalytics";
-import MessagingForm from "../components/Dashboard/MessagingForm";
-import NoShowAnalytics from "../components/Dashboard/NoShowAnalytics";
-import PatientTable from "../components/PatientTable/PatientTable";
+import React, { useState } from "react";
+import NoShowAnalytics from '../components/Dashboard/NoShowAnalytics';
+import DoctorTable from '../components/DoctorTable/DoctorTable';
+import CampaignList from '../components/Campaign/CampaignList';
+import PatientTable from '../components/PatientTable/PatientTable';
+import Reviews from './Reviews';
+import PaymentList from "../components/Payment/PaymentList";
+import SidebarMenu from "./SidebarMenu";
 
 const AdminDashboard = () => {
-  return (
-    <div>
-      <Container>
-        <Typography variant="h4" gutterBottom>
-          Admin Dashboard
-        </Typography>
-        <StatsCards />
-        <Grid container spacing={2}>
-          <Grid size={{ xs: 12, md: 6 }}>
-            <AppointmentsTable />
-          </Grid>
-        <Grid size={{ xs: 12, md: 6 }}>
-            <NoShowChart />
-          </Grid>
-         <Grid size={{ xs: 6}}>
-            <MessagingForm />
-          </Grid>
-          <Box p={3}>
-            <Typography variant="h4">Admin Dashboard</Typography>
-            <NoShowAnalytics />
-            <PatientTable />
-          </Box>
-        </Grid>
-      </Container>
-    </div>
-  );
+ const [activeSection, setActiveSection] = useState('doctor');
+
+    const renderContent = () => {
+        switch (activeSection) {
+            case 'doctor':
+                return <DoctorTable />;
+            case 'patient':
+                return <PatientTable />;
+            case 'payment':
+                return <PaymentList/>; // You may want a real Payment component here
+            case 'campaign':
+                return <CampaignList />;
+            case 'analytics':
+                return <NoShowAnalytics />;
+            case 'review':
+                return <Reviews />;
+            case 'noShow':
+                return <NoShowAnalytics />;
+            case 'signin':
+                return <div>Sign In Page Placeholder</div>;
+            default:
+                return <DoctorTable />;
+        }
+    };
+    return (
+        <div style={{ height: "800px" }}>
+            <Grid container spacing={2} >
+                <Grid size={{ xs: 12, md: 2 }}>
+                    <SidebarMenu onSelect={setActiveSection} />
+                </Grid>
+                <Grid size={{ xs: 12, md: 10 }} >
+                    {renderContent()}
+                </Grid>
+            </Grid>
+        </div>
+    );
 };
 
 export default AdminDashboard;

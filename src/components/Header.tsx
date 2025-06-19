@@ -18,10 +18,11 @@ import { Link } from 'react-router-dom';
 
 const navLinks = [
   { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
+  // { label: 'About', path: '/about' },
   { label: 'Services', path: '/service' },
   { label: 'Doctors', path: '/doctors' },
   { label: 'Contact', path: '/contact' },
+  { label: 'Dashboard', path: '/detailsData' },
   { label: 'Payment', path: '/paymentForm' },
 ];
 

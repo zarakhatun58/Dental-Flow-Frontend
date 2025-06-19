@@ -63,7 +63,7 @@ const DoctorTable = () => {
     {
       field: "actions",
       headerName: "Actions",
-      width: 150,
+      width: 200,
       renderCell: (params: any) => (
         <Button color="error" onClick={() => handleDelete(params.row._id)}>
           Delete
@@ -77,7 +77,7 @@ const DoctorTable = () => {
   }, []);
 
   return (
-    <Box sx={{ mt: 8 }}>
+    <Box >
       <Typography variant="h6" gutterBottom>
         Manage Doctors
       </Typography>
@@ -85,7 +85,7 @@ const DoctorTable = () => {
         Add Doctor
       </Button>
       <Grid container spacing={2} sx={{ margin:"auto"}}> 
-      <Grid size={{ md: 8, xs: 12 }} style={{margin:"auto"}}>
+      <Grid size={{ md: 9, xs: 12 }} style={{margin:"auto",}}>
         <DataGrid
           rows={doctors.map((d) => ({ ...d, id: d._id }))}
           columns={columns}

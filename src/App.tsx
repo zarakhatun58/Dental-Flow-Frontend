@@ -18,6 +18,8 @@ import Contact from './pages/Contact';
 import AdminDashboard from './pages/AdminDashboard';
 import UserDashboard from './pages/UserDashboard';
 import PaymentForm from './components/Payment/PaymentForm';
+import DetailsData from './pages/DetailsData';
+import NoShowAnalytics from './components/Dashboard/NoShowAnalytics';
 
 function App() {
   return (
@@ -38,8 +40,10 @@ function App() {
         <Route path="/payments" element={<PaymentList />} />
         <Route path="/paymentForm" element={<PaymentForm />} />
         <Route path="/outreach" element={<OutreachForm />} />
+        <Route path="/noShow" element={<NoShowAnalytics />} />
         <Route path="/adminDashboard" element={<AdminDashboard />} />
         <Route path="/userDashboard" element={<UserDashboard />} />
+        <Route path="/detailsData" element={<DetailsData />} />
         <Route path="/appointmentBooking" element={<AppointmentBooking />} />
       </Routes>
       <Footer/>
