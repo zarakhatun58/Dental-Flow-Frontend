@@ -25,6 +25,7 @@ const DoctorTable = () => {
   const [doctors, setDoctors] = useState<Doctor[]>([]);
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState({ name: "", specialty: "" });
+  const [selectedDoctor, setSelectedDoctor] = useState<Doctor | null>(null);
 
   const fetchDoctors = async () => {
     try {
@@ -46,6 +47,24 @@ const DoctorTable = () => {
       console.error("Add doctor failed:", err.message);
     }
   };
+const handleUpdate = async () => {
+  if (!selectedDoctor) return;
+  try {
+    await axios.put(`${BASE_URL}/api/doctors/${selectedDoctor._id}`, form);
+    setForm({ name: "", specialty: "" });
+    setSelectedDoctor(null);
+    setOpen(false);
+    fetchDoctors();
+  } catch (err: any) {
+    console.error("Update doctor failed:", err.message);
+  }
+};
+
+  const handleEditClick = (doctor: Doctor) => {
+  setSelectedDoctor(doctor);
+  setForm({ name: doctor.name, specialty: doctor.specialty });
+  setOpen(true); // show modal or form
+};
 
   const handleDelete = async (id: string) => {
     try {
@@ -65,9 +84,22 @@ const DoctorTable = () => {
       headerName: "Actions",
       width: 200,
       renderCell: (params: any) => (
-        <Button color="error" onClick={() => handleDelete(params.row._id)}>
+        <div style={{ display: "flex", gap: "10px" }}>
+        <Button
+          color="primary"
+          variant="outlined"
+          onClick={() => handleEditClick(params.row)}
+        >
+          Update
+        </Button>
+        <Button
+          color="error"
+          variant="outlined"
+          onClick={() => handleDelete(params.row._id)}
+        >
           Delete
         </Button>
+      </div>
       ),
     },
   ];
@@ -85,7 +117,7 @@ const DoctorTable = () => {
         Add Doctor
       </Button>
       <Grid container spacing={2} sx={{ margin:"auto"}}> 
-      <Grid size={{ md: 9, xs: 12 }} style={{margin:"auto",}}>
+      <Grid size={{ md: 10, xs: 12 }} style={{margin:"auto",}}>
         <DataGrid
           rows={doctors.map((d) => ({ ...d, id: d._id }))}
           columns={columns}

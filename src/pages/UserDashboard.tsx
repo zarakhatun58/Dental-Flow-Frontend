@@ -33,7 +33,7 @@ const UserDashboard = () => {
         }
     };
     return (
-        <div style={{ height: "800px" }}>
+        <div style={{ height: "100vh" }}>
             <Grid container spacing={2} >
                 <Grid size={{ xs: 12, md: 2 }}>
                     <SidebarMenu onSelect={setActiveSection} />

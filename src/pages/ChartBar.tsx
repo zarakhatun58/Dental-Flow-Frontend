@@ -5,18 +5,18 @@ const uData = [4000, 3000, 2000, 2780, 1890, 2390, 3490]; // e.g. Doctor count
 const pData = [2400, 1398, 9800, 3908, 4800, 3800, 4300]; // e.g. Patient count
 
 const xLabels = [
-  'Page A',
-  'Page B',
-  'Page C',
-  'Page D',
-  'Page E',
-  'Page F',
-  'Page G',
+  'Patient A',
+  'Patient B',
+  'Patient C',
+  'Patient D',
+  'Patient E',
+  'Patient F',
+  'Patient G',
 ];
 
 export default function ChartBar() {
   return (
-    <div style={{ margin: "30px", paddingLeft: "20px" }}>
+    <div style={{ margin: "30px", paddingLeft: "60px" }}>
       <BarChart
         height={300}
         width={700}
