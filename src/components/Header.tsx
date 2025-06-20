@@ -22,6 +22,7 @@ const navLinks = [
   { label: 'Services', path: '/service' },
   { label: 'Doctors', path: '/doctors' },
   { label: 'Contact', path: '/contact' },
+  { label: 'Appointment', path: '/appointmentBooking' },
   { label: 'Dashboard', path: '/adminDashboard' },
   { label: 'Payment', path: '/paymentForm' },
 ];

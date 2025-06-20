@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <Container style={{marginBottom:"30px"}}>
       <div className="contact" id="contact">
-        <h1 className="heading">Book appointment</h1>
+        <h1 className="heading">Contact For Help</h1>
         <form>
           <p style={{textAlign:"left"}}>Enter your name :</p>
           <input

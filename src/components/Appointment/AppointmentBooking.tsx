@@ -71,7 +71,7 @@ const handleChange = (
       .post("/api/appointments/book", formData)
       .then((res) => {
         alert(res.data.message || "Appointment booked!");
-        navigate("/userDashboard");
+        navigate("/paymentForm");
         // Clear form
         setFormData({
           name: "",
