@@ -1,0 +1,126 @@
+.orbit-wrapper {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.atom-nucleus {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border: 3px solid purple;
+  border-radius: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* Orbit base */
+.atom-orbit {
+  position: absolute;
+  border: 2px dashed #18b1aa;
+  border-radius: 50%;
+  animation: spin 12s linear infinite;
+}
+
+.orbit1 {
+  width: 140px;
+  height: 140px;
+  animation-duration: 8s;
+}
+.orbit2 {
+  width: 220px;
+  height: 220px;
+  animation-duration: 12s;
+}
+.orbit3 {
+  width: 300px;
+  height: 300px;
+  animation-duration: 16s;
+}
+
+.orbit1, .orbit2, .orbit3 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+
+/* Icon style */
+.electron {
+  position: absolute;
+  font-size: 28px;
+  color: green;
+}
+
+/* Position icons on circle */
+.electron.top {
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.electron.bottom {
+  bottom: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.electron.left {
+  left: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.electron.right {
+  right: -14px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Rotation animation */
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.electron {
+  position: absolute;
+  font-size: 28px;
+ color: green;
+  transform-origin: center center;
+  animation: counter-spin 12s linear infinite reverse;
+}
+
+/* Optional: Faster or slower based on orbit level */
+.orbit1 .electron {
+  animation-duration: 8s;
+}
+.orbit2 .electron {
+  animation-duration: 12s;
+}
+.orbit3 .electron {
+  animation-duration: 16s;
+}
+
+/* Keeps card upright while rotating orbit */
+@keyframes counter-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}

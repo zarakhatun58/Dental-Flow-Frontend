@@ -20,6 +20,7 @@ import UserDashboard from './pages/UserDashboard';
 import PaymentForm from './components/Payment/PaymentForm';
 import DetailsData from './pages/DetailsData';
 import NoShowAnalytics from './components/Dashboard/NoShowAnalytics';
+import Clinic from './components/Clinics/Clinic';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path="/adminDashboard" element={<AdminDashboard />} />
         <Route path="/userDashboard" element={<UserDashboard />} />
         <Route path="/detailsData" element={<DetailsData />} />
+        <Route path="/clinic" element={<Clinic />} />
         <Route path="/appointmentBooking" element={<AppointmentBooking />} />
       </Routes>
       <Footer/>

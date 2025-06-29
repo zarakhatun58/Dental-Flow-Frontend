@@ -1,0 +1,11 @@
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.clinic-card{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    width: 250px;
+    height: auto;
+    padding: 20px;
+}

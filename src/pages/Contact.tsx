@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.css";
-import { Button, Container, Grid } from "@mui/material";
+import { Button, Container } from "@mui/material";
 
 const Contact = () => {
   return (

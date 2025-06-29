@@ -36,7 +36,7 @@ const Header = () => {
 
   return (
     <>
-      <AppBar position="static" style={{backgroundColor:"#18b1aa"}}>
+      <AppBar position="sticky" style={{backgroundColor:"#18b1aa"}}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Typography variant="h6" component="div">
             <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>

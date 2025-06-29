@@ -2,7 +2,7 @@ import { Box, Grid, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Diversity3Icon from '@mui/icons-material/Diversity3';
 import CountUp from 'react-countup';
-import api, { BASE_URL } from '../services/Apis';
+import { BASE_URL } from '../services/Apis';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';

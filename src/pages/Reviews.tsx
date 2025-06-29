@@ -15,11 +15,11 @@ const Reviews = () => {
               alternatives available in the market.
             </p>
             <div className="stars">
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star"></i>
-              <i className="fas fa-star-half-alt"></i>
+              <i className="fas fa-star" style={{ color: 'yellow' }}></i>
+              <i className="fas fa-star" style={{ color: 'yellow' }}></i>
+              <i className="fas fa-star" style={{ color: 'yellow' }}></i>
+              <i className="fas fa-star" style={{ color: 'yellow' }}></i>
+              <i className="fas fa-star-half-alt" style={{ color: 'yellow' }}></i>
             </div>
             <h3>Alan Harris</h3>
             <span>Manager</span>
