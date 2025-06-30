@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div style={{ padding: "30px" }}>
       <Grid container spacing={2}>
+         
         <Grid size={{md:7, xs:12}}><Hero/></Grid>
         <Grid size={{md:5, xs:12}}><Orbit/></Grid>
       </Grid>

@@ -43,7 +43,7 @@ function App() {
         <Route path="/outreach" element={<OutreachForm />} />
         <Route path="/noShow" element={<NoShowAnalytics />} />
         <Route path="/adminDashboard" element={<AdminDashboard />} />
-        <Route path="/userDashboard" element={<UserDashboard />} />
+        <Route path="/userBoard" element={<UserDashboard />} />
         <Route path="/detailsData" element={<DetailsData />} />
         <Route path="/clinic" element={<Clinic />} />
         <Route path="/appointmentBooking" element={<AppointmentBooking />} />

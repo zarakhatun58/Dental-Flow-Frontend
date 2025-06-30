@@ -4,8 +4,6 @@ import {
     MedicalServices,
     Science,
     EventAvailable,
-    SupportAgent,
-    PhoneIphone,
     BuildCircle,
     CheckCircle
 } from '@mui/icons-material';

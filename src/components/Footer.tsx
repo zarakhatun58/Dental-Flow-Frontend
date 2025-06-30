@@ -6,13 +6,14 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import "./styles.css"
 
 const Footer = () => {
   return (
     <Box sx={{ bgcolor: '#18b1aa', color: 'white', py: 4, px: 2 }}>
       <Grid container spacing={4}>
         <Grid size={{ xs: 12, md: 4 }}>
-          <Typography variant="h4" gutterBottom>
+          <Typography  className='footer-header'>
             Dental AI Clinic
           </Typography>
           <Typography variant="h5">

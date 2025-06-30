@@ -21,7 +21,8 @@ const navLinks = [
   // { label: 'About', path: '/about' },
   { label: 'Services', path: '/service' },
   { label: 'Doctors', path: '/doctors' },
-  { label: 'Contact', path: '/contact' },
+  // { label: 'Contact', path: '/contact' },
+  { label: 'User Board', path: '/userBoard' },
   { label: 'Appointment', path: '/appointmentBooking' },
   { label: 'Dashboard', path: '/adminDashboard' },
   { label: 'Payment', path: '/paymentForm' },
@@ -31,7 +32,6 @@ const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
-
   const toggleDrawer = () => setDrawerOpen(!drawerOpen);
 
   return (
@@ -76,6 +76,7 @@ const Header = () => {
       {/* Drawer for mobile */}
       <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
         <List sx={{ width: 250 }}>
+          
           {navLinks.map((item) => (
             <ListItem
               key={item.label}
@@ -93,6 +94,7 @@ const Header = () => {
             <ListItemText primary="Sign Up" />
           </ListItem>
         </List>
+        
       </Drawer>
     </>
   );

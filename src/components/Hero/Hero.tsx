@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import React, { useRef, useState } from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

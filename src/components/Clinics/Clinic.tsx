@@ -1,6 +1,6 @@
 // src/pages/Clinics.js
 import React, { useEffect, useState } from 'react';
-import api, { BASE_URL } from '../../services/Apis';
+import  { BASE_URL } from '../../services/Apis';
 import { CircularProgress, Grid } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import "./styles.css"

@@ -124,3 +124,12 @@
     transform: rotate(-360deg);
   }
 }
+
+@media only screen and (max-width: 768px) {
+.orbit-wrapper {
+ 
+  width: 100%;
+  margin: auto;
+  
+}
+}
