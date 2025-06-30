@@ -29,9 +29,9 @@ const Home = () => {
       <Grid>
         <Clinic />
       </Grid>
-      <Grid>
+      {/* <Grid>
         <Reviews/>
-      </Grid>
+      </Grid> */}
       
     </div>
   );
